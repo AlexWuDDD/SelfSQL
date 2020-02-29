@@ -16,4 +16,4 @@
 2. extract it and cd it
 3. make and then cd *src*
 4. ./redis-server or ./redis-cli
-5. ./redis-benchmark -> test performance 
+5. ./redis-benchmark -> test performance
