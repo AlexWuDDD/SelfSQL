@@ -1,3 +1,3 @@
 # Data Query Language
 
-## 基础查询
+## 查询语言
