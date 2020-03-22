@@ -21,4 +21,7 @@ FROM employees
 GROUP BY department_id
 ORDER BY AVG(salary) DESC;
 
-#5. 选择具有各个job_id的员工个数
+#5. 查询各个job_id的员工个数
+SELECT COUNT(*), job_id
+FROM employees
+GROUP BY job_id; 
