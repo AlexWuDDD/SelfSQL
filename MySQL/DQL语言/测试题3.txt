@@ -1,0 +1,41 @@
+已知表stuinfo
+id学号
+name 姓名
+email 邮箱 john@126.com
+gradeId 年级编号
+sex 性别 男 女
+age 年龄
+
+已知表 grade
+id 年纪编号
+gradeName 年级编号
+
+一、查询 所有学员的邮箱的用户名（注：邮箱中@前面的字符）
+select substr(email, 1, instr(email, '@')-1) 用户名 from stuinfo;
+
+二、查询男生和女生的个数
+select count(*), sex from stuinfo group by sex;
+
+三、查询年龄>18的所有学生的姓名和年纪名称
+select name, gradeName
+from stuinfo s
+inner join grade g on s.gradeId = g.id
+where age>18
+
+四、查询哪个年纪的学生最小年龄>20岁
+
+select min(age),gradeId
+from stuinfo
+group by gradeId
+having min(age)>20
+
+五、试说出查询语句中涉及到的所有的关键字、以及执行先后顺序
+select 查询列表                          7th
+from 表                                 1st
+连接类型 join 表2                         2nd
+on 连接条件                              3rd   
+where 筛选条件                           4th
+group by 分组列表                        5th
+having 分组后的筛选                       6th
+order by 排序列表                        8th
+limit 偏移，条目数                        9th
