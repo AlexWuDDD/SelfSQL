@@ -1,0 +1,3 @@
+SHOW INDEX FROM tbl_emp;
+
+EXPLAIN SELECT * FROM tbl_emp;
